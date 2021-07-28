@@ -4,7 +4,7 @@ email: okaits7534@gmail.com
 description: okaitsが作ったブログです！主にPCについての記事を投稿しています！
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://okaitslinblog.github.io" # the base hostname & protocol for your site
-twitter_username: @okaits7534
+twitter_username: okaits7534
 github_username:  okaitslinblog
 
 # Layout settings
