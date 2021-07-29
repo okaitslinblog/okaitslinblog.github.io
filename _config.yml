@@ -18,7 +18,7 @@ more_vert:
     link: https://okaitslinblog.github.io/feed.xml
 
 disqus: true
-disqus_shortname: 'okaitslinblog.github.io'
+disqus_shortname: 'okaitslinblog'
 
 # Build settings
 markdown: kramdown
