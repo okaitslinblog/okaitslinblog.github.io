@@ -65,9 +65,9 @@ fi
 Enable color display in this user account (y/N)?
 </code></pre><br>
 と質問されたら、yと答えてください。<br>
-<pre class="prettyprint"><code class="prettyprint lang-bash" contenteditable>git config --global user.email [ビルドしてる人のメールアドレス]
-git config --global user.name [ビルドしてる人の名前/ニックネーム]
-repo init -u git://github.com/LineageOS/android.git -b lineage-18.1 --depth=1
+また、名前とメールアドレスを聞かれますが、ビルドしている人の名前（ニックネームでも可）とメールアドレスを入力してください。<br>
+<pre class="prettyprint"><code class="prettyprint lang-bash" contenteditable>
+repo init -u git://github.com/LineageOS/android.git -b lineage-18.1 --depth=1 --config-name
 repo sync -j4
 </code></pre>
 <h1>ビルド</h1>
