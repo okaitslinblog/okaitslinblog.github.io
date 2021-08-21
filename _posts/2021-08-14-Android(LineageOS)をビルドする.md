@@ -114,7 +114,7 @@ echo "'google_default_client_secret': '"${clientSecret}"'," >> ${HOME}/.googleap
 &uarr; 編集できるようになってます。コピーする前に最初のところのAPIキーとクライアントID,シークレットだけ書き換えたほうがいいと思います。<br>
 <h1>ビルド</h1>
 いよいよビルドです。<br>
-<pre class="prettyprint"><code class="prettyprint lang-bash">source build/envsetup.sh
+<pre class="prettyprint"><code class="prettyprint lang-bash contenteditable">source build/envsetup.sh
 breakfast [デバイス名]
 croot
 brunch [デバイス名]
