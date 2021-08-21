@@ -70,6 +70,48 @@ Enable color display in this user account (y/N)?
 repo init -u git://github.com/LineageOS/android.git -b lineage-18.1 --depth=1 --config-name
 repo sync -j4
 </code></pre>
+<h1>Google APIの設定</h1>
+Google APIを設定してChromium OSからログインできるようにします。<br>
+まず、<a href="https://groups.google.com/a/chromium.org/forum/?fromgroups#!forum/chromium-dev">ここ</a>に参加します。<br>
+参加したら、<a href="https://cloud.google.com/console">ここ</a>へ行って、左上の「My First Project」をクリックします。<br>
+そしたら、右上の「新しいプロジェクト」をクリックして、適当に名前をつけて作成してください。<br>
+それができたら、左上の「My First Project」をもう一度クリックして、自分でつけた名前が表示されているところの読み込みが終わるまで待ちます。<br>
+読み込みが終わったら、そこをクリックしてください。<br>
+そしたら、上の検索ボックスに、次の文字例をいれ、有効化してください。<br>
+<ul>
+<li>Cloud Search API<br></li>
+<li>Geolocation API<br></li>
+<li>Google Drive API<br></li>
+<li>Safe Browsing API<br></li>
+<li>Time Zone API<br></li>
+<li>Admin SDK API<br></li>
+<li>Geocoding API<br></li>
+<li>Google Assistant API<br></li>
+<li>Google Calendar API<br></li>
+<li>Nearby Messages API<br></li>
+</ul>
+終わったら、左のメニューの「APIとサービス」、「認証情報」の順にクリックしてください。<br>
+そして、「+ 認証情報を作成」、「OAuth クライアントID」、「同意画面の設定」の順にクリックし、<br>
+「外部」を選択し、「作成」をクリックしてください。<br>
+そして、アプリ名に適当な名前を入力し、ユーザーサポートメールとデベロッパーの連絡先情報に自分のメールアドレスを選択し、「保存して次へ」をクリックします。<br>
+そして、「スコープを追加または削除」ボタンを押し、すべてにチェックをつけ、「更新」を押します。<br>
+そして、「保存して次へ」を押します。<br>
+そして、「+ ADD USERS」ボタンを押し、Chromium OSにログインするユーザーのメールアドレスを入力して、「追加」ボタンを押してください。<br>
+そして、「保存して次へ」を押し、「ダッシュボードに戻る」ボタンを押してください。<br>
+そしたらまた、「+ 認証情報を作成」、「OAuth クライアント ID」の順にクリックし、<br>
+アプリケーションの種類に「デスクトップ アプリ」、名前に適当な名前をつけて作成してください。<br>
+そしたら、クライアントIDとクライアントシークレットが出るので、どこかに保存してください。<br>
+そしたらまた「+ 認証情報を作成」、「API キー」の順にクリックしてください。<br>
+そしたら、APIキーが出てくるので、保存してください。<br>
+そしたら、これを実行してください。<br>
+<pre class="prettyprint"><code class="prettyprint lang-bash" contenteditable>api=[メモしておいたAPIキー]
+clientId=メモしておいたクライアントID
+clientSecret=メモしておいたクライアントシークレット
+echo "'google_api_key': '"${api}"'," > ${HOME}/.googleapikeys
+echo "'google_default_client_id: '"${clientId}"'," >> ${HOME}/.googleapikeys
+echo "'google_default_client_secret': '"${clientSecret}"'," >> ${HOME}/.googleapikeys
+</code></pre>
+&uarr; 編集できるようになってます。コピーする前に最初のところのAPIキーとクライアントID,シークレットだけ書き換えたほうがいいと思います。<br>
 <h1>ビルド</h1>
 いよいよビルドです。<br>
 <pre class="prettyprint"><code class="prettyprint lang-bash">source build/envsetup.sh
