@@ -57,7 +57,14 @@ fi
 </code></pre><br>
 <h1>ソースコードのダウンロード</h1>
 ソースコードのダウンロードです。<br>
-ちなみに編集可能になってます。
+ちなみに編集可能になってます。<br>
+なお、<br>
+<pre class="prettyprint"><code class="prettyprint">Testing colorized output (for 'repo diff', 'repo status'):
+  black    red      green    yellow   blue     magenta   cyan     white
+  bold     dim      ul       reverse
+Enable color display in this user account (y/N)?
+</code></pre><br>
+と質問されたら、yと答えてください。<br>
 <pre class="prettyprint"><code class="prettyprint lang-bash" contenteditable>git config --global user.email [ビルドしてる人のメールアドレス]
 git config --global user.name [ビルドしてる人の名前/ニックネーム]
 repo init -u git://github.com/LineageOS/android.git -b lineage-18.1 --depth=1
