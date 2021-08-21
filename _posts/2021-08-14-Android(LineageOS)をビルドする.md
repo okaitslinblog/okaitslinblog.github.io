@@ -37,7 +37,7 @@ author: okaits#7534
 <h1>作業フォルダ作成</h1>
 作業フォルダの作成です。<br>
 <pre class="prettyprint"><code class="prettyprint lang-bash">mkdir -p ${HOME}/google/android/lineageos/18.1/bin
-cd ${HOME}/google/andorid/lineageos/18.1
+cd ${HOME}/google/android/lineageos/18.1
 echo 'export PATH="${PATH}:${HOME}/google/android/lineageos/18.1/bin"' >> ${HOME}/.bashrc
 source ${HOME}/.bashrc
 </code></pre><br>
