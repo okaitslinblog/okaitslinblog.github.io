@@ -43,7 +43,7 @@ source ${HOME}/.bashrc
 </code></pre><br>
 <h1>依存ソフトのインストール</h1>
 ビルドに必要なソフトのインストールです。<br>
-<pre class="prettyprint"><code class="prettyprint lang-bash">sudo apt install build-essential ccache libncurses5 libssl-dev m4 unzip zip
+<pre class="prettyprint"><code class="prettyprint lang-bash">sudo apt install build-essential ccache libncurses5 libssl-dev m4 unzip zip -y
 if ls ${HOME}/google/depot_tools >/dev/null 2>&1
   then
   true
