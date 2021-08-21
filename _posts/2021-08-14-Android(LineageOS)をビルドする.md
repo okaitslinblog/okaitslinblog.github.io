@@ -48,9 +48,11 @@ if ls ${HOME}/google/depot_tools >/dev/null 2>&1
   then
   true
   else
+  cd ${HOME}/google/
   git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
   echo 'export PATH="${HOME}/google/depot_tools:${PATH}"' >> ${HOME}/.bashrc
   source ${HOME}/.bashrc
+  cd ${HOME}/google/android/lineageos/18.1
 fi
 </code></pre><br>
 <h1>ソースコードのダウンロード</h1>
