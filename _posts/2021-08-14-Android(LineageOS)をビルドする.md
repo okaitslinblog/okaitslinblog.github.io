@@ -36,16 +36,14 @@ author: okaits#7534
    <!-- /EthereumAds --> 
 <h1>作業フォルダ作成</h1>
 作業フォルダの作成です。<br>
-<pre class="prettyprint"><code class="prettyprint lang-bash">
-mkdir -p ${HOME}/google/android/lineageos/18.1/bin
+<pre class="prettyprint"><code class="prettyprint lang-bash">mkdir -p ${HOME}/google/android/lineageos/18.1/bin
 cd ${HOME}/google/andorid/lineageos/18.1
 echo 'export PATH="${PATH}:${HOME}/google/android/lineageos/18.1/bin"' >> ${HOME}/.bashrc
 source ${HOME}/.bashrc
 </code></pre><br>
 <h1>依存ソフトのインストール</h1>
 ビルドに必要なソフトのインストールです。<br>
-<pre class="prettyprint"><code class="prettyprint lang-bash">
-sudo apt install build-essential ccache libncurses5 libssl-dev m4 unzip zip
+<pre class="prettyprint"><code class="prettyprint lang-bash">sudo apt install build-essential ccache libncurses5 libssl-dev m4 unzip zip
 if ls ${HOME}/google/depot_tools >/dev/null 2>&1
   then
   true
@@ -57,16 +55,14 @@ fi
 <h1>ソースコードのダウンロード</h1>
 ソースコードのダウンロードです。<br>
 ちなみに編集可能になってます。
-<pre class="prettyprint"><code class="prettyprint lang-bash" contenteditable>
-git config --global user.email [ビルドしてる人のメールアドレス]
+<pre class="prettyprint"><code class="prettyprint lang-bash" contenteditable>git config --global user.email [ビルドしてる人のメールアドレス]
 git config --global user.name [ビルドしてる人の名前/ニックネーム]
 repo init -u git://github.com/LineageOS/android.git -b lineage-18.1 --depth=1
 repo sync -j4
 </code></pre>
 <h1>ビルド</h1>
 いよいよビルドです。<br>
-<pre class="prettyprint"><code class="prettyprint lang-bash">
-source build/envsetup.sh
+<pre class="prettyprint"><code class="prettyprint lang-bash">source build/envsetup.sh
 breakfast [デバイス名]
 croot
 brunch [デバイス名]

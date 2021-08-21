@@ -36,29 +36,24 @@ author: okaits#7534
    <!-- /EthereumAds --> 
 <h1>作業フォルダを作る</h1>
 作業フォルダを作ります。
-<pre class="prettyprint"><code class="prettyprint lang-bash">
-cd $HOME
+<pre class="prettyprint"><code class="prettyprint lang-bash">cd $HOME
 umask 022
 mkdir -p google/chromiumos
 </code></pre><br>
 <h1>依存ソフトのインストール</h1>
 ビルドに必要なソフトのインストールです。<br>
-<pre class="prettyprint"><code class="prettyprint lang-bash">
-sudo apt-get install git-core gitk git-gui curl lvm2 thin-provisioning-tools python3-pkg-resources python3-virtualenv python3-oauth2client xz-utils python3.6
-</code></pre>
+<pre class="prettyprint"><code class="prettyprint lang-bash">sudo apt-get install git-core gitk git-gui curl lvm2 thin-provisioning-tools python3-pkg-resources python3-virtualenv python3-oauth2client xz-utils python3.6</code></pre>
 <h1>depot_tools導入</h1>
 depot_toolsとは、ソースコードのダウンロードなどに使う「repo」コマンドなどをまとめたツールセットです。<br>
 導入は簡単です。<br>
-<pre class="prettyprint"><code class="prettyprint lang-bash">
-cd ${HOME}/google/
+<pre class="prettyprint"><code class="prettyprint lang-bash">cd ${HOME}/google/
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 echo 'export PATH="${HOME}/google/depot_tools:${PATH}"' >> ${HOME}/.bashrc
 source ${HOME}/.bashrc
 </code></pre><br>
 <h1>ソースコードのダウンロード</h1>
 ソースコードのダウンロードです。普通めっちゃ時間かるん<b>ですが</b>、なんと<code class="prettyprint">--depth=1</code>というオプションを<code class="prettyprint lang-bash">repo init</code>コマンドにつけ足すと、ものすごく速くなります。<br>
-<pre class="prettyprint"><code class="prettyprint lang-bash">
-cd ${HOME}/google/chromiumos/
+<pre class="prettyprint"><code class="prettyprint lang-bash">cd ${HOME}/google/chromiumos/
 repo init -u https://chromium.googlesource.com/chromiumos/manifest.git --repo-url https://chromium.googlesource.com/external/repo.git --depth=1
 repo sync -j4
 </code></pre>
@@ -98,10 +93,9 @@ Google APIを設定してChromium OSからログインできるようにしま�
 そしたらまた「+ 認証情報を作成」、「API キー」の順にクリックしてください。<br>
 そしたら、APIキーが出てくるので、保存してください。<br>
 そしたら、これを実行してください。<br>
-<pre class="prettyprint"><code class="prettyprint lang-bash" contenteditable>
-api=[メモしておいたAPIキー]
-clientId=[メモしておいたクライアントID]
-clientSecret=[メモしておいたクライアントシークレット]
+<pre class="prettyprint"><code class="prettyprint lang-bash" contenteditable>api=[メモしておいたAPIキー]
+clientId=メモしておいたクライアントID
+clientSecret=メモしておいたクライアントシークレット
 echo "'google_api_key': '"${api}"'," > ${HOME}/.googleapikeys
 echo "'google_default_client_id: '"${clientId}"'," >> ${HOME}/.googleapikeys
 echo "'google_default_client_secret': '"${clientSecret}"'," >> ${HOME}/.googleapikeys
@@ -109,8 +103,7 @@ echo "'google_default_client_secret': '"${clientSecret}"'," >> ${HOME}/.googleap
 &uarr; 編集できるようになってます。コピーする前に最初のところのAPIキーとクライアントID,シークレットだけ書き換えたほうがいいと思います。<br>
 <h1>ビルド</h1>
 いよいよビルドです。<br>
-<pre class="prettyprint"><code class="prettyprint">
-cros_sdk
+<pre class="prettyprint"><code class="prettyprint">cros_sdk
 export BOARD=amd64-generic
 setup_board --board=${BOARD}
 ./set_shared_user_password.sh
