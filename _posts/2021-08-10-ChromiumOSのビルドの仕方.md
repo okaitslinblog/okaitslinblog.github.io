@@ -52,7 +52,7 @@ depot_toolsとは、ソースコードのダウンロードなどに使う「rep
 <pre class="prettyprint"><code class="prettyprint lang-bash">
 cd ${HOME}/google/
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
-echo 'export PATH="'${HOME}'/google/depot_tools' >> ${HOME}/.bashrc
+echo 'export PATH="${HOME}/google/depot_tools:${PATH}"' >> ${HOME}/.bashrc
 source ${HOME}/.bashrc
 </code></pre><br>
 <h1>ソースコードのダウンロード</h1>
