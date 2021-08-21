@@ -9,7 +9,7 @@ layout: default
 		<section>
 			<header>
 				<p><time datatime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time></p>
-				<h1><a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a></h1>
+				<h2><a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a></h2>
 			</header>
 			<div class="summary"><p>{{ post.summary }}</p></div>
 		</section>
