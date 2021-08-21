@@ -1,4 +1,4 @@
---
+---
 layout: post
 title: Android 11 (LineageOS 18.1)をビルドする
 description: x86もビルドできます。ちょっとダウンロードが速くなってます。
