@@ -11,7 +11,7 @@ author: okaits#7534
 ChromiumOSのビルドの仕方です。<br>
 通常よりもダウンロードが速くなってます。<br>
 
-{% include toc.html html=content sanitize=true %}
+{:TOC}
 
 <h1>作業フォルダを作る</h1>
 作業フォルダを作ります。

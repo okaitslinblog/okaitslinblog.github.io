@@ -10,7 +10,7 @@ author: okaits#7534
 
 Android 11をビルドする方法です。<br>
 
-{% include toc.html html=content sanitize=true %}
+{:TOC}
 
 <h1>作業フォルダ作成</h1>
 作業フォルダの作成です。<br>

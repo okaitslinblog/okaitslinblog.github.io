@@ -11,7 +11,7 @@ author: okaits#7534
 例えば、Discordで繋がっている友達や開発仲間などと一緒にGithubを用いて開発をしているときにコミットの情報が出てくるといろいろと便利です。<br>
 今回はそれをやってみましょう。<br>
 
-{% include toc.html html=content sanitize=true %}
+{:TOC}
 
 <br>
 <h1>Discord側の設定</h1>
