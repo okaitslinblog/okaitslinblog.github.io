@@ -7,33 +7,12 @@ highlight: false
 disqus: true
 author: okaits#7534
 ---
- <!-- EthereumAds -->
-   <div id="EthereumAds-okaitslinblog"></div>
-   <script src="https://ethereumads.com/adviewer.js">
-   </script>
-   <script>
-       EthereumAds.initAdSlot({
-           acceptedCurrencies: ["ALL"], // option ALL for all whitelisted tokens, ETH for Ethereum, DAI for DAI Stablecoin
-           //validatorEndpoint:"", // optional custom validator
-           mediaType: "image_320x50",
-           fallback: "default", // default, none, custom url
-           slot: "okaitslinblog",
-           address: "0xd404f198c4f580727eb11cd69b581d5f10c7efd9",
-           platform: "",
-           affiliate: "",
-           keywords:"", //comma separatedy
-           adult: false,
-           version: "1.00"
-       });
-       /*
-        for responsive ads add and adjust this according to your needs:
-        responsive: [
-            { mediaType: "image_728x90", minWidth: 728 },
-            { mediaType: "image_300x600" }
-        ],
-       */
-   </script>
-   <!-- /EthereumAds --> 
+
+ChromiumOSのビルドの仕方です。<br>
+通常よりもダウンロードが速くなってます。<br>
+
+{% include toc.html html=content sanitize=true %}
+
 <h1>作業フォルダを作る</h1>
 作業フォルダを作ります。
 <pre class="prettyprint"><code class="prettyprint lang-bash">cd $HOME
